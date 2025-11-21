@@ -1,0 +1,54 @@
+{
+    "name": "mimicak/laravel-blueprint-visualizer",
+    "description": "A powerful, zero-config ERD + Model Relationship visualizer for Laravel applications. Automatically discovers your Eloquent models and migrations, merges the information intelligently, and renders beautiful, interactive diagrams without running migrations or database connection.",
+    "keywords": [
+        "mimicak",
+        "laravel-blueprint-visualizer"
+    ],
+    "homepage": "https://github.com/mimicak/laravel-blueprint-visualizer",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ashok kumar",
+            "email": "muthurose2204@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MimicAk\\LaravelBlueprintVisualizer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MimicAk\\LaravelBlueprintVisualizer\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MimicAk\\LaravelBlueprintVisualizer\\LaravelBlueprintVisualizerServiceProvider"
+            ],
+            "aliases": {
+                "LaravelBlueprintVisualizer": "MimicAk\\LaravelBlueprintVisualizer\\LaravelBlueprintVisualizerFacade"
+            }
+        }
+    }
+}
